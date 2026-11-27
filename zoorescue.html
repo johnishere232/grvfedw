@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zoo Rescue</title>
+<style>
+body {
+  font-family: Arial;
+  background: #e5f5e5;
+  text-align: center;
+  margin: 0;
+}
+header {
+  background: #267344;
+  color: white;
+  padding: 30px;
+}
+section {
+  padding: 20px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px auto;
+  width: 70%;
+  border-radius: 15px;
+}
+button {
+  background: #267344;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🦁 Zoo Rescue Centre</h1>
+<p>Saving Animals, Protecting Nature!</p>
+</header>
+
+<section>
+<div class="card">
+<h2>Welcome to Zoo Rescue!</h2>
+<p>We help injured and endangered animals.</p>
+</div>
+
+<div class="card">
+<h2>🐘 Animals We Help</h2>
+<p>Lions • Elephants • Tigers • Koalas</p>
+</div>
+
+<div class="card">
+<h2>🌳 Our Mission</h2>
+<p>Protect wildlife and give animals a safe home.</p>
+<button onclick="help()">Help Animals</button>
+<p id="message"></p>
+</div>
+</section>
+
+<script>
+function help() {
+document.getElementById("message").innerHTML =
+"Thank you for supporting wildlife! 🐾";
+}
+</script>
+
+</body>
+</html>
