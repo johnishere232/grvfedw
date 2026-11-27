@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather App</title>
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(#65b7ed, #d8f3ff);
+  text-align: center;
+  padding: 20px;
+}
+.card {
+  background: white;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px #888;
+}
+h1 {
+  color: #145b91;
+}
+#icon {
+  font-size: 70px;
+}
+.temp {
+  font-size: 55px;
+  color: #145b91;
+}
+button {
+  background: #1676b8;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover {
+  background: #084c80;
+}
+</style>
+</head>
+<body>
+
+<h1>🌤️ Weather Station</h1>
+<p>Check out today's weather!</p>
+
+<div class="card">
+<h2>Melbourne Weather</h2>
+
+<div id="icon">☀️</div>
+<div class="temp" id="temp">24°C</div>
+
+<h3 id="condition">Sunny</h3>
+<p>💨 Wind: 12 km/h</p>
+<p>💧 Humidity: 45%</p>
+
+<button onclick="changeWeather()">
+Change Weather
+</button>
+</div>
+
+<script>
+let weather = [
+  {icon:"☀️", temp:24, condition:"Sunny"},
+  {icon:"🌧️", temp:16, condition:"Rainy"},
+  {icon:"⛅", temp:20, condition:"Cloudy"},
+  {icon:"⛈️", temp:13, condition:"Stormy"},
+  {icon:"❄️", temp:5, condition:"Snowy"}
+];
+
+let current = 0;
+
+function changeWeather() {
+  current = (current + 1) % weather.length;
+
+  document.getElementById("icon").innerHTML =
+  weather[current].icon;
+
+  document.getElementById("temp").innerHTML =
+  weather[current].temp + "°C";
+
+  document.getElementById("condition").innerHTML =
+  weather[current].condition;
+}
+</script>
+
+</body>
+</html>
