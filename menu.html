@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Golden Fork Restaurant</title>
+<style>
+body {
+  font-family: Arial;
+  background: #fff3df;
+  margin: 0;
+  text-align: center;
+}
+header {
+  background: #713c20;
+  color: white;
+  padding: 30px;
+}
+h2 {
+  color: #713c20;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px #ccc;
+}
+.card h3 {
+  color: #713c20;
+}
+button {
+  background: #713c20;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background: #a65c30;
+}
+#message {
+  color: green;
+  font-weight: bold;
+}
+footer {
+  background: #713c20;
+  color: white;
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🍽️ GOLDEN FORK</h1>
+<p>Delicious Food, Happy People!</p>
+</header>
+
+<h2>Our Restaurant Menu</h2>
+<p>Fresh food made with love ❤️</p>
+
+<div class="menu">
+
+<div class="card">
+<h3>🍔 Cheeseburger</h3>
+<p>Juicy beef and melted cheese</p>
+<p>$12.00</p>
+<button onclick="order('Cheeseburger')">Order</button>
+</div>
+
+<div class="card">
+<h3>🍕 Pepperoni Pizza</h3>
+<p>Cheese, tomato and pepperoni</p>
+<p>$15.00</p>
+<button onclick="order('Pepperoni Pizza')">Order</button>
+</div>
+
+<div class="card">
+<h3>🍝 Spaghetti</h3>
+<p>Pasta with delicious tomato sauce</p>
+<p>$14.00</p>
+<button onclick="order('Spaghetti')">Order</button>
+</div>
+
+<div class="card">
+<h3>🍗 Fried Chicken</h3>
+<p>Crispy chicken with seasoning</p>
+<p>$13.00</p>
+<button onclick="order('Fried Chicken')">Order</button>
+</div>
+
+<div class="card">
+<h3>🌮 Tacos</h3>
+<p>Beef, lettuce and fresh salsa</p>
+<p>$11.00</p>
+<button onclick="order('Tacos')">Order</button>
+</div>
+
+<div class="card">
+<h3>🥗 Caesar Salad</h3>
+<p>Fresh lettuce and crunchy croutons</p>
+<p>$9.00</p>
+<button onclick="order('Caesar Salad')">Order</button>
+</div>
+
+<div class="card">
+<h3>🍟 French Fries</h3>
+<p>Golden crispy potato fries</p>
+<p>$6.00</p>
+<button onclick="order('French Fries')">Order</button>
+</div>
+
+<div class="card">
+<h3>🌭 Hot Dog</h3>
+<p>Sausage with mustard and sauce</p>
+<p>$8.00</p>
+<button onclick="order('Hot Dog')">Order</button>
+</div>
+
+<div class="card">
+<h3>🍰 Chocolate Cake</h3>
+<p>Rich chocolate dessert</p>
+<p>$7.00</p>
+<button onclick="order('Chocolate Cake')">Order</button>
+</div>
+
+<div class="card">
+<h3>🍦 Ice Cream</h3>
+<p>Vanilla, chocolate or strawberry</p>
+<p>$5.00</p>
+<button onclick="order('Ice Cream')">Order</button>
+</div>
+
+</div>
+
+<h2 id="message">Choose something delicious!</h2>
+
+<script>
+function order(food) {
+  document.getElementById("message").innerHTML =
+  "You ordered " + food + "! Enjoy! 🎉";
+}
+</script>
+
+<footer>
+<p>Golden Fork Restaurant © 2026</p>
+<p>Thank you for visiting!</p>
+</footer>
+
+</body>
+</html>
